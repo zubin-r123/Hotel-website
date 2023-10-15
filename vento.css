@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Junge&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Junge', serif;
+}
+
+.major {
+    padding: 0;
+    width: 100%; 
+}
+
+.nav {
+    background-color: #969696;
+    padding: 12px 3px;
+    display: flex;
+}
+
+ul {
+    display: flex;
+    margin: 23px 0;
+    margin-left: auto;
+    align-items: center;
+    text-align: center;
+}
+
+ul > li {
+    list-style: none;
+    margin: 0 13px;
+    cursor: pointer;
+    text-align: left;
+}
+
+ul > li > a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+}
+
+
+.heading {
+    margin: 23px;
+    font-weight: 800;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+ul > li:hover {
+    color: white;
+}
+
+.carousel {
+    max-width: 80vw;
+    width:80vw;
+    height:80vh;
+    margin: 0 auto;
+    position:relative;
+    left:10px;
+}
+
+.carousel > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    transition-delay: 0.5s;
+}
+
+.slide > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+}
+
+.carousel-button {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.carousel-button:focus {
+    outline: 1px solid black;
+}
+
+.carousel-button.prev {
+    left: 1rem;
+}
+
+.carousel-button.next {
+    right: 1rem;
+}
+
+.intro {
+    padding: 80px 40px;
+    font-size: 150%;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.hr {
+    text-align: center; /* Center-align the <ol> content */
+    padding: 0; /* Reset padding to zero to avoid unwanted spacing */
+}
+
+.hr ol {
+    display: inline-block; /* Display the <ol> as an inline-block element */
+    text-align: left; /* Align the text within the <ol> to the left */
+}
+
+
+.abus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* To stack the image and text vertically */
+    text-align: center; /* Center-align text */
+}
+
+
+.ab-us1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left; /* Align text to the left */
+}
+
+
+.ab-us1 img {
+    max-width: 40%; /* Adjust the width of the image as needed */
+    height: auto;
+}
+
+.abusl1 {
+    max-width: 55%; /* Adjust the width of the text container as needed */
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.abus label {
+    font-weight: bold;
+}
+
+.ab-us2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.ab-us2 > img {
+    order: 2; /* Move the image to the right */
+    max-width: 40%;
+    height: auto; 
+}
+
+.ab-us2 > .abusl1 {
+    order: 1; /* Move the text to the left */
+}
+
+.review-section {
+    background-image: url("lobby.jpg");
+}
+
+
+.review {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc; /* Border style for each review */
+   
+}
+
+.review > img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.review p {
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: rgba(223, 231, 176, 0.7); /* Adjust the alpha value (0.5) for transparency */
+    padding: 20px; 
+}
+
+
+.review-section {
+    width: 90%; /* Adjust the width as needed */
+    margin: 0 auto;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    background-size: cover; /* This scales the image to cover the entire element */
+    background-position: center;
+    border: 2px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.extra{
+    color: white;
+}
+
+.end{
+    border:2px solid #969696;
+    background-color: #969696;
+    text-align: center;
+    padding:10px;
+}
+
+.about-section {
+    text-align: center;
+    max-width: 1000px; /* Adjust the max-width as needed */
+    margin: 0 auto;
+}
+
+.about-section p {
+    margin-bottom: 20px;
+}
+
+.cu-img {
+    display: block; /* Make the image a block-level element */
+    margin: 0 auto; /* Center horizontally by setting left and right margins to 'auto' */
+}
+
+@media screen and (max-width: 600px) {
+    .nav {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .nav > ul {
+      display: flex;
+      padding: 12px 3px;
+    }
+    .nav > ul > li {
+      margin-right: 10px; /* Add margin to create spaces between list items */
+    }
+    .heading {
+      margin: 10px 0;
+    }
+    ul {
+      margin: 0;
+    }
+    ul > li {
+      margin: 10px 0;
+    }
+  
+    .hr > ol {
+      text-align: left; /* Center-align the <ol> content */
+      padding: 0; /* Reset padding to zero to avoid unwanted spacing */
+    }
+
+    .cu-img{
+        width:100%;
+        height:100%;
+    }
+
+    .about-section > img{
+        width:100%;
+    }
+  }
+  
+
+  
